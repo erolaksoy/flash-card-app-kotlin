@@ -3,21 +3,21 @@ package com.example.flashcardapp.domain.model
 import com.google.gson.annotations.SerializedName
 
 data class Card(
-    @SerializedName("Id")
+    @SerializedName("id")
     val Id : Int,
-    @SerializedName("Name")
+    @SerializedName("name")
     val Name : String,
-    @SerializedName("MotherLanguageText")
+    @SerializedName("motherLanguageText")
     val MotherLanguageText : String,
-    @SerializedName("TargetLanguageText")
+    @SerializedName("targetLanguageText")
     val TargetLanguageText : String,
-    @SerializedName("Caption")
+    @SerializedName("caption")
     val Caption : String,
-    @SerializedName("PhotoPath")
+    @SerializedName("photoPath")
     val PhotoPath : String?=null,
-    @SerializedName("AppUserId")
-    val AppUserId: Int,
-    @SerializedName("AppUser")
+    @SerializedName("appUserId")
+    val AppUserId: String,
+    @SerializedName("appUser")
     val AppUser : User
 ){
 
