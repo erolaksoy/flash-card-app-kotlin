@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.flashcardapp.domain.model.Card
 import com.example.flashcardapp.domain.services.CardService
+import com.example.flashcardapp.util.LiveNetworkListener
 import kotlinx.coroutines.*
 import kotlin.coroutines.coroutineContext
 
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
             println(service.data)
         }
 
+        //println("Connection State =  ${LiveNetworkListener.getConnectionType(this)}")
 
     }
 }
