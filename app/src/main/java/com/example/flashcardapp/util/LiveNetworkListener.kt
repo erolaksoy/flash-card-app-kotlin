@@ -9,7 +9,6 @@ class LiveNetworkListener {
             val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             val connection = cm.activeNetwork ?: return false
             return true
-
         }
     }
 }
