@@ -6,6 +6,7 @@ import com.google.gson.Gson
 import retrofit2.Response
 import timber.log.Timber
 
+
 class HelperService {
     companion object {
         fun <T1, T2> handleResponseError(generalResponse: Response<T1>): ApiResponse<T2> {
@@ -46,7 +47,15 @@ class HelperService {
             if (apiResponse.error != null) {
                 apiError = apiResponse.error
             }
-            return ApiResponse(null,apiResponse.statusCode,apiError,false)
+            return ApiResponse(null, apiResponse.statusCode, apiError, false)
+        }
+
+        fun <T1, T2> handleAllStates(response: Response<T1>): ApiResponse<T2> {
+            if (!response.isSuccessful) return handleResponseError(response)
+            val responseBody = response.body()!! as ApiResponse<T2>
+            if (responseBody.error != null) return handleApiError(responseBody)
+            val data = responseBody.data
+            return ApiResponse(data as T2, response.code(), null, true)
         }
     }
 }
