@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/flashCardMain">
+
+    <activity
+        android:id="@+id/userActivity"
+        android:name="com.example.flashcardapp.ui.user.UserActivity"
+        android:label="activity_user"
+        tools:layout="@layout/activity_user" />
+    <fragment
+        android:id="@+id/flashCardMain"
+        android:name="com.example.flashcardapp.ui.flashcardmain.FlashCardMain"
+        android:label="flash_card_main_fragment"
+        tools:layout="@layout/flash_card_main_fragment" />
+</navigation>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FlashCardApp</string>
+    <string name="app_name_res">My Flash Cards</string>
 </resources>

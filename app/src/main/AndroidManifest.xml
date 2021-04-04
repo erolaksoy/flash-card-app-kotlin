@@ -15,11 +15,11 @@
         android:theme="@style/Theme.FlashCardApp"
         android:usesCleartextTraffic="true">
         <activity android:name=".ui.login.LoginActivity"/>
-        <activity android:name=".ui.user.UserActivity" />
-        <activity android:name=".ui.launch.LaunchActivity">
+        <activity android:name=".ui.launch.LaunchActivity"/>
+
+        <activity android:name=".ui.user.UserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
